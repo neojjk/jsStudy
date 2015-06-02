@@ -1,0 +1,1563 @@
+2000
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="http://s1.daumcdn.net/svc/original/U03/cssjs/jquery/jquery-1.11.1.min.js"></script>
+<title>Daum tv팟 - 팟플레이어</title>
+<link rel="shortcut icon" href="/favicon.ico?20150529133430" />
+<link rel="stylesheet" type="text/css" href="http://s1.daumcdn.net/tvpot/20150529133430/css/player.css" />
+<script type="text/javascript" src="http://s1.daumcdn.net/tvpot/20150529133430/js/jigu.min.js"></script>
+<script type="text/javascript" src="http://s1.daumcdn.net/tvpot/20150529133430/js/player.js"></script>
+<script type="text/javascript">
+window.__IS_TEST = 'false';
+</script>
+<script type="text/javascript">
+// <![CDATA[
+	document.domain = "daum.net";
+// ]]>
+</script>
+</head>
+<body>
+<div id="playerWrap">
+
+	<h1 class="hidden">팟플레이어 프로그램</h1>
+
+	<div class="player_header">
+		<div class="area_service">
+	<form id="castAP" name="castAP" action="/potplayer/Search.do" target="main" method="get">
+	<h2 class="hidden">동영상 검색하기</h2>
+	<fieldset class="tv_search">
+	<legend>동영상 검색하기 폼</legend>
+	<dl>
+		<dt><label class="hidden" for="inp_tv_srh">검색어 입력</label></dt>
+		<dd><input type="text" id="inp_tv_srh" name="search" class="inp_text" maxlength="40" size="40" value="" /></dd>
+			</dl>
+	<input type="submit" class="type_btn b_srh01" value="검색" title="검색하기">
+	<input type="button" class="type_btn b_srh02" value="통합검색" title="통합검색하기">
+	</fieldset>
+	<div class="wrap_btn">
+		<a class="type_btn b_pre" title="이전" href="#none">이전으로 이동</a>
+		<a class="type_btn b_nxt" title="다음" href="#none">다음으로 이동</a>
+		<a class="type_btn b_reset" title="새로고침" href="#">새로고침</a>
+	</div>
+	</form>
+</div>
+		<h2 class="hidden">메뉴</h2>
+<ul id="playerNavi" class="area_gnb">
+	<li class="live on"><a href="/potplayer/Live.do">라이브</a></li>
+	<li class="best "><a href="/potplayer/Best.do">베스트</a></li>
+	<li class="download "><a href="/potplayer/Download.do">다운로드</a></li>
+	<li class="bookmark "><a href="login://http://tvpot.daum.net/potplayer/Top.do?url=/potplayer/Favorite.do?type=0">즐겨찾기</a></li>
+</ul>
+	</div><!-- // pot_header -->
+
+	<div id="playerContents" class="player_contents">
+		<h2 class="hidden">라이브</h2>
+		<div class="wrap_cont">
+			<div class="wrap_banner ">
+	<a href="http://tvpot.daum.net/mypot/Top.do?ownerid=o2scDLIVbHc0" target="_blank"><img src="http://i1.tvpot.daumcdn.net/svc/image/U03/tvpot_admin/admin/20150531/20150531_182047_71717124.jpeg" width="274" height="60" alt="마이 리틀 텔레비전 생중계"/></a>
+</div>
+
+<!-- 팟플레이어 공지사항 시작 / notice_list --> 
+			<div class="wrap_noti" list_cnt="2" > <!-- 열기 : opt_open 추가-->
+				<h3 class="screen_out">공지</h3>
+				<a href="#none" class="type_btn btn_extend">펼치기</a> <!-- 펼쳐졌을 경우 [접기]로 변경 -->
+				<ul class="list_noti">
+																													<li class="fst"><a href="http://blog.daum.net/ahahvideo/17946610" title="마이 리틀 텔레비전 사칭 방송 강경 규제 안내" class="link_noti" target="_blank"><span class="ico_comm"></span> <span class="txt_noti">마이 리틀 텔레비전 사칭 방송 강경 규제 안내</span></a></li>
+																														<li><a href="http://blog.daum.net/ahahvideo/17946610" title="마이 리틀 텔레비전 사칭 방송 강경 규제 안내" class="link_noti" target="_blank"><span class="txt_noti">마이 리틀 텔레비전 사칭 방송 강경 규제 안내</span></a></li>	
+																<li class="noti_bottom">
+						<a href="http://blog.daum.net/_blog/ArticleCateList.do?blogid=0Cqdr&CATEGORYID=511177&dispkind=B2202" class="link_noti" target="_blank"><span class="txt_noti_bottom">전체보기</span></a>
+					</li>
+				</ul>
+				
+			</div>	
+<!-- 팟플레이어 공지사항 끝 -->
+
+
+
+
+
+
+
+<!-- 오늘의 공식방송 시작 -->
+			<h3 class="type_tit tit_today_list">오늘의 공식방송</h3><!-- 2013-08-05 타이틀 변경 및 전체 일정 버튼 추가 -->
+			<div class="area_today_main">
+				<div class="wrap_day">
+							
+					<!-- 2013-08-05 수정 및 이전, 다음 날짜 버튼 추가 -->			
+					<span class="date">
+						<em class="m05">05월</em><em class="d31">31일</em>
+					</span>					
+					<a href="/potplayer/Live.do?tday=20150530" class="ico_program btn_prev">이전 날짜</a>
+					<a href="/potplayer/Live.do?tday=20150601" class="ico_program btn_next">다음 날짜</a>
+					<a href="/live/Top.do" class="link_whole" target="_blank">전체일정</a>
+					<!--// 2013-08-05 이전, 다음 날짜 버튼 추가 -->
+				
+				</div>
+							<ol> 
+								
+									
+									  
+				  
+					<li>
+						<span class="hour">00:00</span>
+						<p class="subject">
+							<a class="cast_title"  title="롤챔스 2015 다시보기" href="#none">롤챔스 2015 다시보기</a>
+																							<a class="icon_onair" title="방송중" href="#+++lol24.man">ON AIR</a>
+																													<em>온게임넷 LOL</em>
+						</p>
+												<div class="wrap_room">
+							<dl class="broad_info" test="I'm here!">
+																<dt>시청자수</dt> 
+								<dd title="시청자수" class="icon_room">405/2000</dd>
+																<dt>추천수</dt>
+								<dd title="추천수" class="icon_good">7460</dd>
+							</dl>
+						</div>
+											</li>
+								
+									
+									  
+				  
+					<li>
+						<span class="hour">00:00</span>
+						<p class="subject">
+							<a class="cast_title"  title="YTN 데일리 라이브" href="#none">YTN 데일리 라이브</a>
+																							<a class="icon_onair" title="방송중" href="#+++ytn24.man">ON AIR</a>
+																													<em>YTN</em>
+						</p>
+												<div class="wrap_room">
+							<dl class="broad_info" test="I'm here!">
+																<dt>시청자수</dt> 
+								<dd title="시청자수" class="icon_room">216/2000</dd>
+																<dt>추천수</dt>
+								<dd title="추천수" class="icon_good">13136</dd>
+							</dl>
+						</div>
+											</li>
+								
+									
+									  
+				  
+					<li>
+						<span class="hour">00:00</span>
+						<p class="subject">
+							<a class="cast_title"  title="뉴스Y 데일리 라이브" href="#none">뉴스Y 데일리 라이브</a>
+																							<a class="icon_onair" title="방송중" href="#+++newsy2013.man">ON AIR</a>
+																													<em>뉴스Y</em>
+						</p>
+												<div class="wrap_room">
+							<dl class="broad_info" test="I'm here!">
+																<dt>시청자수</dt> 
+								<dd title="시청자수" class="icon_room">75/2000</dd>
+																<dt>추천수</dt>
+								<dd title="추천수" class="icon_good">5539</dd>
+							</dl>
+						</div>
+											</li>
+								
+									
+									  
+				  
+					<li style="display:none">
+						<span class="hour">08:15</span>
+						<p class="subject">
+							<a class="disabled"  title="LA다저스 VS St.루이스" href="#none" onclick="return false;">LA다저스 VS St.루이스</a>
+																					<em>MLB</em>
+						</p>
+											</li>
+								
+									
+									  
+				  
+					<li style="display:none">
+						<span class="hour">08:15</span>
+						<p class="subject">
+							<a class="disabled"  title="보스턴 VS 텍사스" href="#none" onclick="return false;">보스턴 VS 텍사스</a>
+																					<em>MLB</em>
+						</p>
+											</li>
+								
+									
+									  
+				  
+					<li style="display:none">
+						<span class="hour">11:10</span>
+						<p class="subject">
+							<a class="disabled"  title="피츠버그 VS 샌디에이고" href="#none" onclick="return false;">피츠버그 VS 샌디에이고</a>
+																					<em>MLB</em>
+						</p>
+											</li>
+								
+									
+									  
+				  
+					<li style="display:none">
+						<span class="hour">13:30</span>
+						<p class="subject">
+							<a class="disabled"  title="넥센 VS SK" 
+2000
+href="#none" onclick="return false;">넥센 VS SK</a>
+																					<em>KBO</em>
+						</p>
+											</li>
+								
+									
+									  
+				  
+					<li style="display:none">
+						<span class="hour">13:30</span>
+						<p class="subject">
+							<a class="disabled"  title="삼성 VS LG" href="#none" onclick="return false;">삼성 VS LG</a>
+																					<em>KBO</em>
+						</p>
+											</li>
+								
+									
+									  
+				  
+					<li style="display:none">
+						<span class="hour">13:30</span>
+						<p class="subject">
+							<a class="disabled"  title="한화 VS 롯데" href="#none" onclick="return false;">한화 VS 롯데</a>
+																					<em>KBO</em>
+						</p>
+											</li>
+								
+									
+									  
+				  
+					<li style="display:none">
+						<span class="hour">13:30</span>
+						<p class="subject">
+							<a class="disabled"  title="두산 VS kt" href="#none" onclick="return false;">두산 VS kt</a>
+																					<em>KBO</em>
+						</p>
+											</li>
+								
+									
+									  
+				  
+					<li style="display:none">
+						<span class="hour">14:00</span>
+						<p class="subject">
+							<a class="disabled"  title="블레이드 앤 소울 토너먼트 2015 코리아 시즌1" href="#none" onclick="return false;">블레이드 앤 소울 토너먼트 2015..</a>
+																					<em>온게임넷</em>
+						</p>
+											</li>
+								
+									
+									  
+				  
+					<li style="display:none">
+						<span class="hour">14:00</span>
+						<p class="subject">
+							<a class="disabled"  title="경남 VS 고양" href="#none" onclick="return false;">경남 VS 고양</a>
+																					<em>K리그 챌린지</em>
+						</p>
+											</li>
+								
+									
+									  
+				  
+					<li style="display:none">
+						<span class="hour">14:00</span>
+						<p class="subject">
+							<a class="disabled"  title="성남 VS 전북" href="#none" onclick="return false;">성남 VS 전북</a>
+																					<em>K리그</em>
+						</p>
+											</li>
+								
+									
+									  
+				  
+					<li style="display:none">
+						<span class="hour">14:00</span>
+						<p class="subject">
+							<a class="disabled"  title="인천 VS 수원" href="#none" onclick="return false;">인천 VS 수원</a>
+																					<em>K리그</em>
+						</p>
+											</li>
+								
+									
+									  
+				  
+					<li style="display:none">
+						<span class="hour">16:00</span>
+						<p class="subject">
+							<a class="disabled"  title="충주 VS 부천" href="#none" onclick="return false;">충주 VS 부천</a>
+																					<em>K리그 챌린지</em>
+						</p>
+											</li>
+								
+									
+									  
+				  
+					<li style="display:none">
+						<span class="hour">16:00</span>
+						<p class="subject">
+							<a class="disabled"  title="서울 VS 울산" href="#none" onclick="return false;">서울 VS 울산</a>
+																					<em>K리그</em>
+						</p>
+											</li>
+								
+									
+									  
+				  
+					<li style="display:none">
+						<span class="hour">16:00</span>
+						<p class="subject">
+							<a class="disabled"  title="히어로즈 연승전" href="#none" onclick="return false;">히어로즈 연승전</a>
+																					<em>베스트 플레이</em>
+						</p>
+											</li>
+								
+									
+									  
+				  
+					<li style="display:none">
+						<span class="hour">16:30</span>
+						<p class="subject">
+							<a class="disabled"  title="NC VS KIA" href="#none" onclick="return false;">NC VS KIA</a>
+																					<em>KBO</em>
+						</p>
+											</li>
+								
+									
+									  
+				  
+					<li style="display:none">
+						<span class="hour">19:00</span>
+						<p class="subject">
+							<a class="disabled"  title="스베누 스타리그 시즌2" href="#none" onclick="return false;">스베누 스타리그 시즌2</a>
+																					<em>온게임넷</em>
+						</p>
+											</li>
+								
+									
+									  
+				  
+					<li>
+						<span class="hour">19:30</span>
+						<p class="subject">
+							<a class="cast_title"  title="김구라의 '트루 스토리'" href="#none">김구라의 '트루 스토리'</a>
+																							<a class="icon_onair" title="방송중" href="#+++mbctv01.man">ON AIR</a>
+																													<em>MBC 마이 리틀 텔레비전</em>
+						</p>
+												<div class="wrap_room">
+							<dl class="broad_info" test="I'm here!">
+																<dt>시청자수</dt> 
+								<dd title="시청자수" class="icon_room">0/2000</dd>
+																<dt>추천수</dt>
+								<dd title="추천수" class="icon_good">0</dd>
+							</dl>
+						</div>
+											</li>
+								
+									
+									  
+				  
+					<li>
+						<span class="hour">19:30</span>
+						<p class="subject">
+							<a class="cast_title"  title="백주부의 '더 고급진 레시피'" href="#none">백주부의 '더 고급진 레시피'</a>
+																							<a class="icon_onair" title="방송중" href="#+++mbctv02.man">ON AIR</a>
+																													<em>MBC 마이 리틀 텔레비전</em>
+						</p>
+												<div class="wrap_room">
+							<dl class="broad_info" test="I'm here!">
+																<dt>시청자수</dt> 
+								<dd title="시청자수" class="icon_room">0/2000</dd>
+																<dt>추천수</dt>
+								<dd title="추천수" class="icon_good">0</dd>
+							</dl>
+						</div>
+											</li>
+								
+									
+									  
+				  
+					<li>
+						<span class="hour">19:30</span>
+						<p class="subject">
+							<a class="cast_title"  title="홍석천의 '내가 너희를 구원하리라'" href="#none">홍석천의 '내가 너희를 구원..</a>
+																							<a class="icon_onair" title="방송중" href="#+++mbctv03.man">ON AIR</a>
+																													<em>MBC 마이 리틀 텔레비전</em>
+						</p>
+												<div class="wrap_room">
+							<dl class="broad_info" test="I'm here!">
+																<dt>시청자수</dt> 
+								<dd title="시청자수" class="icon_room">0/2000</dd>
+																<dt>추천수</dt>
+								<dd title="추천수" class="icon_good">0</dd>
+							</dl>
+						</div>
+											</li>
+								
+									
+									  
+				  
+					<li>
+						<span class="hour">19:30</span>
+						<p class="subject">
+							<a class="cast_title"  title="샤이니 키의 'View티풀 라이프'" href="#none">샤이니 키의 'View티풀 라..</a>
+																							<a class="icon_onair" title="방송중" href="#+++mbctv04.man">ON AIR</a>
+																													<em>MBC 마이 리틀 텔레비전</em>
+						</p>
+												<div class="wrap_room">
+							<dl class="broad_info" test="I'm here!">
+																<dt>시청자수</dt> 
+								<dd title="시청자수" class="icon_room">0/2000</dd>
+																<dt>추천수</dt>
+								<dd title="추천수" class="icon_good">0</dd>
+							</dl>
+						</div>
+											</li>
+								
+									
+									  
+				  
+					<li>
+						<span class="hour">19:30</span>
+						<p class="subject">
+							<a class="cast_title"  title="신수지의 '기적의 체조 쇼'" href="#none">신수지의 '기적의 체조 쇼'</a>
+																							<a class="icon_onair" title="방송중" href="#+++mbctv05.man">ON AIR</a>
+																													<em>MBC 마이 리틀 텔레비전</em>
+						</p>
+												<div class="wrap_room">
+							<dl class="broad_info" test="I'm here!">
+																<dt>시청자수</dt> 
+								<dd title="시청자수" class="icon_room">0/2000</dd>
+																<dt>추천수</dt>
+								<dd title="추천수" class="icon_good">0</dd>
+							</dl>
+						</div>
+											</li>
+								</ol>
+										<a class="btn_open01" href="#none">오늘의주요방송 전체 리스트 열기</a>
+				<a class="btn_close01" href="#none" style="display:none;">오늘의주요방송 전체 리스트 닫기</a>
+						</div>
+<!-- 오늘의 공식방송 끝 -->
+			
+
+<!-- 추천방송 리스트 시작 -->
+			<div class="area_broadcast" id="recommend_cast_list">
+				<h3 class="type_tit tit_recomm_list">추천방송<span class="list_num">(개)</span></h3>
+				
+				
+				
+				<ul class="wrap_tv_list">
+										<li id="pid_17046733_pdid_AiH2y" class
+2000
+="live_air">
+
+	<a class="thumb" href="/street/list?prgmid=17046733&amp;rprgmid=17046726&amp;ip=203.133.173.14&amp;lock=&amp;adult=0&amp;special=0&amp;limits=2000&amp;login=0&amp;managed=0&amp;protocolVer=57&amp;chat=dchat@tvpot.0@111@9000@0&amp;ishome=0&amp;qualityV=2000&amp;resH=1280&amp;resV=720&amp;prgmid1=17046735&amp;ip1=203.133.173.22&amp;qualityV1=500&amp;resH1=480&amp;resV1=320">
+			<img height="56" width="75" alt="[식빵] 하스스톤 투기장 외길인생" onerror="this.src='http://i1.daumcdn.net/icon/see/2010_potplayer/noimg.gif';" src="http://i1.daumcdn.net/potplayer/live/image/17046733/snapshot.jpg?t=201553122246" alt="방 이미지 없음" />
+		 <span class="ico_comm ico_hd">HD</span> 	</a>
+		<div class="cont">
+		<a class="broad_name" href="/street/list?prgmid=17046733&amp;rprgmid=17046726&amp;ip=203.133.173.14&amp;lock=&amp;adult=0&amp;special=0&amp;limits=2000&amp;login=0&amp;managed=0&amp;protocolVer=57&amp;chat=dchat@tvpot.0@111@9000@0&amp;ishome=0&amp;qualityV=2000&amp;resH=1280&amp;resV=720&amp;prgmid1=17046735&amp;ip1=203.133.173.22&amp;qualityV1=500&amp;resH1=480&amp;resV1=320" title="[식빵] 하스스톤 투기장 외길인생">[식빵] 하스스톤 투기장 외길인생</a>
+				<dl class="room_info">
+			<dt>아이디</dt>
+			<dd title="식빵">식빵</dd>
+						<dt>방송설명</dt>
+			<dd class="prgm_desc" title="하스스톤 투기장 전문 방송">
+				<span class="bar">|</span>
+				<span class="title">하스스톤 투기장 전문 방송</span>
+			</dd>
+					</dl>
+		<a href="javascript:;" onclick="window.open('/potplayer/SharePopup.do?pdid=sikkazama00&title=' + encodeURIComponent('[식빵] 하스스톤 투기장 외길인생'), 'potplayershare1', 'width=480, height=390, location=0, menubar=0, resizable=0, scrollbars=0, toolbar=0')" class="ico_program link_share">공유하기</a>
+		<dl class="broad_info">
+			<dt>시청자수</dt>
+			<dd title="시청자수" class="icon_room">
+								1273
+								/2000
+			</dd>
+			<dt>추천수</dt>
+			<dd class="icon_good">32237</dd>
+		</dl>
+		<div id="castInfoThumb_17046733" class="cast_info_panel">
+	<div class="title">방송정보</div>
+	<div class="info_main">
+		<ul>
+			<li>PD : <strong>식빵</strong></li>
+			<li>총시청자 :
+				<strong>
+									1273 / 2000
+								</strong>
+			</li>
+			<li>방속성 :
+				<strong>
+									 일반방 								</strong>
+			</li>
+			<li>방송시작 : 05-31 20:40</li>
+		</ul>
+	</div>
+	<div class="info_sub">
+		<ul>
+			<li>해상도 : 1280x720</li>
+			<li>프레임 : 30fps</li>
+			<li>화질 : 2000kbps</li>
+			<li>음질 : 128kbps</li>
+			<li>주파수 : 48Khz</li>
+			<li>소리 :   스테레오</li>
+		</ul>
+	</div>
+</div>
+	</div>
+</li>
+										<li id="pid_17045499_pdid_3QPV7" class="live_air">
+
+	<a class="thumb" href="/street/list?prgmid=17045499&amp;rprgmid=17045493&amp;ip=203.133.173.20&amp;lock=&amp;adult=0&amp;special=0&amp;limits=2000&amp;login=0&amp;managed=0&amp;protocolVer=57&amp;chat=dchat@tvpot.0@111@9000@0&amp;ishome=0&amp;qualityV=4000&amp;resH=1280&amp;resV=720&amp;prgmid1=17045497&amp;ip1=203.133.173.20&amp;qualityV1=500&amp;resH1=480&amp;resV1=320">
+			<img height="56" width="75" alt="[왁리텔] 신작 인디 집에서 아픈게임 홈식" onerror="this.src='http://i1.daumcdn.net/icon/see/2010_potplayer/noimg.gif';" src="http://i1.daumcdn.net/potplayer/live/image/17045499/snapshot.jpg?t=201553122246" alt="방 이미지 없음" />
+		 <span class="ico_comm ico_hd">HD</span> 	</a>
+		<div class="cont">
+		<a class="broad_name" href="/street/list?prgmid=17045499&amp;rprgmid=17045493&amp;ip=203.133.173.20&amp;lock=&amp;adult=0&amp;special=0&amp;limits=2000&amp;login=0&amp;managed=0&amp;protocolVer=57&amp;chat=dchat@tvpot.0@111@9000@0&amp;ishome=0&amp;qualityV=4000&amp;resH=1280&amp;resV=720&amp;prgmid1=17045497&amp;ip1=203.133.173.20&amp;qualityV1=500&amp;resH1=480&amp;resV1=320" title="[왁리텔] 신작 인디 집에서 아픈게임 홈식">[왁리텔] 신작 인디 집에서 아픈..</a>
+				<dl class="room_info">
+			<dt>아이디</dt>
+			<dd title="우왁굳">우왁굳</dd>
+					</dl>
+		<a href="javascript:;" onclick="window.open('/potplayer/SharePopup.do?pdid=ecvhao&title=' + encodeURIComponent('[왁리텔] 신작 인디 집에서 아픈게임 홈식'), 'potplayershare1', 'width=480, height=390, location=0, menubar=0, resizable=0, scrollbars=0, toolbar=0')" class="ico_program link_share">공유하기</a>
+		<dl class="broad_info">
+			<dt>시청자수</dt>
+			<dd title="시청자수" class="icon_room">
+								1160
+								/2000
+			</dd>
+			<dt>추천수</dt>
+			<dd class="icon_good">4188</dd>
+		</dl>
+		<div id="castInfoThumb_17045499" class="cast_info_panel">
+	<div class="title">방송정보</div>
+	<div class="info_main">
+		<ul>
+			<li>PD : <strong>우왁굳</strong></li>
+			<li>총시청자 :
+				<strong>
+									1160 / 2000
+								</strong>
+			</li>
+			<li>방속성 :
+				<strong>
+									 일반방 								</strong>
+			</li>
+			<li>방송시작 : 05-31 20:11</li>
+		</ul>
+	</div>
+	<div class="info_sub">
+		<ul>
+			<li>해상도 : 1280x720</li>
+			<li>프레임 : 60fps</li>
+			<li>화질 : 4000kbps</li>
+			<li>음질 : 128kbps</li>
+			<li>주파수 : 48Khz</li>
+			<li>소리 :   스테레오</li>
+		</ul>
+	</div>
+</div>
+	</div>
+</li>
+										<li id="pid_17046872_pdid_6suRm" class="live_air">
+
+	<a class="thumb" href="/street/list?prgmid=17046872&amp;rprgmid=17046867&amp;ip=203.133.173.37&amp;lock=&amp;adult=0&amp;special=0&amp;limits=2000&amp;login=0&amp;managed=0&amp;protocolVer=57&amp;chat=dchat@tvpot.0@111@9000@0&amp;ishome=0&amp;qualityV=4000&amp;resH=1280&amp;resV=720&amp;prgmid1=17046883&amp;ip1=203.133.173.40&amp;qualityV1=500&amp;resH1=480&amp;resV1=320">
+			<img height="56" width="75" alt="까막의 카스 글옵 TSP" onerror="this.src='http://i1.daumcdn.net/icon/see/2010_potplayer/noimg.gif';" src="http://i1.daumcdn.net/potplayer/live/image/17046872/snapshot.jpg?t=201553122246" alt="방 이미지 없음" />
+		 <span class="ico_comm ico_hd">HD</span> 	</a>
+		<div class="cont">
+		<a class="broad_name" href="/street/list?prgmid=17046872&amp;rprgmid=17046867&amp;ip=203.133.173.37&amp;lock=&amp;adult=0&amp;special=0&amp;limits=2000&amp;login=0&amp;managed=0&amp;protocolVer=57&amp;chat=dchat@tvpot.0@111@9000@0&amp;ishome=0&amp;qualityV=4000&amp;resH=1280&amp;resV=720&amp;prgmid1=17046883&amp;ip1=203.133.173.40&amp;qualityV1=500&amp;resH1=480&amp;resV1=320" title="까막의 카스 글옵 TSP">까막의 카스 글옵 TSP</a>
+				<dl class="room_info">
+			<dt>아이디</dt>
+			<dd title="까막">까막</dd>
+						<dt>방송설명</dt>
+			<dd class="prgm_desc" title="인턴각">
+				<span class="bar">|</span>
+				<span class="title">인턴각</span>
+			</dd>
+					</dl>
+		<a href="javascript:;" onclick="window.open('/potplayer/SharePopup.do?pdid=dldhgud8164&title=' + encodeURIComponent('까막의 카스 글옵 TSP'), 'potplayershare1', 'width=480, height=390, location=0, menubar=0, resizable=0, scrollbars=0, toolbar=0')" class="ico_program link_share">공유하기</a>
+		<dl class="broad_info">
+			<dt>시청자수</dt>
+			<dd title="시청자수" class="icon_room">
+								408
+								/2000
+			</dd>
+			<dt>추천수</dt>
+			<dd class="icon_good">164821</dd>
+		</dl>
+		<div id="castInfoThumb_17046872" class="cast_info_panel">
+	<div class="title">방송정보</div>
+	<div class="info_main">
+		<ul>
+			<li>PD : <strong>까막</strong></li>
+			<li>총시청자 :
+				<strong>
+									408 / 2000
+								</strong>
+			</li>
+			<li>방속성 :
+				<strong>
+									 일반방 								</strong>
+			</li>
+			<li>방송시작 : 05-31 20:42</li>
+		</ul>
+	</div>
+	<div class="info_sub">
+		<ul>
+			<li>해상도 : 1280x720</li>
+			<li>프레임 : 60fps</li>
+			<li>화질 : 4000kbps</li>
+			<li>음질 : 192kbps</li>
+			<li>주파수 : 48Khz</li>
+			<li>소리 :   스테레오</li>
+		</ul>
+	</div>
+</div>
+	</div>
+</li>
+										<li id="pid_17042473_pdid_2nVyl" class="live_air">
+
+	<a class="thumb" href="/street/list?prgmid=17042473&amp;rprgmid=17042470&amp;ip=203.133.173.16&amp;lock=&amp;adult=0&amp;special=0&amp;limits=2000&amp;login=0&amp;managed=0&amp;protocolVer=57&amp;chat=dchat@tvpot.0@111@9000@0&amp;ishome=0&amp;qualityV=4000&amp;re
+2000
+sH=1280&amp;resV=720&amp;prgmid1=17042476&amp;ip1=203.133.173.16&amp;qualityV1=500&amp;resH1=480&amp;resV1=320">
+			<img height="56" width="75" alt="(생) 철권7 한성대 우리게임장" onerror="this.src='http://i1.daumcdn.net/icon/see/2010_potplayer/noimg.gif';" src="http://i1.daumcdn.net/potplayer/live/image/17042473/snapshot.jpg?t=201553122246" alt="방 이미지 없음" />
+		 <span class="ico_comm ico_hd">HD</span> 	</a>
+		<div class="cont">
+		<a class="broad_name" href="/street/list?prgmid=17042473&amp;rprgmid=17042470&amp;ip=203.133.173.16&amp;lock=&amp;adult=0&amp;special=0&amp;limits=2000&amp;login=0&amp;managed=0&amp;protocolVer=57&amp;chat=dchat@tvpot.0@111@9000@0&amp;ishome=0&amp;qualityV=4000&amp;resH=1280&amp;resV=720&amp;prgmid1=17042476&amp;ip1=203.133.173.16&amp;qualityV1=500&amp;resH1=480&amp;resV1=320" title="(생) 철권7 한성대 우리게임장">(생) 철권7 한성대 우리게임장</a>
+				<dl class="room_info">
+			<dt>아이디</dt>
+			<dd title="우리게임장">우리게임장</dd>
+					</dl>
+		<a href="javascript:;" onclick="window.open('/potplayer/SharePopup.do?pdid=fox-sim&title=' + encodeURIComponent('(생) 철권7 한성대 우리게임장'), 'potplayershare1', 'width=480, height=390, location=0, menubar=0, resizable=0, scrollbars=0, toolbar=0')" class="ico_program link_share">공유하기</a>
+		<dl class="broad_info">
+			<dt>시청자수</dt>
+			<dd title="시청자수" class="icon_room">
+								171
+								/2000
+			</dd>
+			<dt>추천수</dt>
+			<dd class="icon_good">1400</dd>
+		</dl>
+		<div id="castInfoThumb_17042473" class="cast_info_panel">
+	<div class="title">방송정보</div>
+	<div class="info_main">
+		<ul>
+			<li>PD : <strong>우리게임장</strong></li>
+			<li>총시청자 :
+				<strong>
+									171 / 2000
+								</strong>
+			</li>
+			<li>방속성 :
+				<strong>
+									 일반방 								</strong>
+			</li>
+			<li>방송시작 : 05-31 19:01</li>
+		</ul>
+	</div>
+	<div class="info_sub">
+		<ul>
+			<li>해상도 : 1280x720</li>
+			<li>프레임 : 60fps</li>
+			<li>화질 : 4000kbps</li>
+			<li>음질 : 128kbps</li>
+			<li>주파수 : 48Khz</li>
+			<li>소리 :   스테레오</li>
+		</ul>
+	</div>
+</div>
+	</div>
+</li>
+										<li id="pid_17035787_pdid_3blBE" class="live_air">
+
+	<a class="thumb" href="/street/list?prgmid=17035787&amp;rprgmid=17035772&amp;ip=203.133.173.36&amp;lock=&amp;adult=0&amp;special=0&amp;limits=2000&amp;login=0&amp;managed=0&amp;protocolVer=57&amp;chat=dchat@tvpot.0@111@9000@0&amp;ishome=0&amp;qualityV=4000&amp;resH=1280&amp;resV=720&amp;prgmid1=17035783&amp;ip1=203.133.173.24&amp;qualityV1=500&amp;resH1=480&amp;resV1=320">
+			<img height="56" width="75" alt="[조마문]GTA5출현했던영상 보며 노가리 4000K 60FPS (XBOX360)" onerror="this.src='http://i1.daumcdn.net/icon/see/2010_potplayer/noimg.gif';" src="http://i1.daumcdn.net/potplayer/live/image/17035787/snapshot.jpg?t=201553122246" alt="방 이미지 없음" />
+		 <span class="ico_comm ico_hd">HD</span> 	</a>
+		<div class="cont">
+		<a class="broad_name" href="/street/list?prgmid=17035787&amp;rprgmid=17035772&amp;ip=203.133.173.36&amp;lock=&amp;adult=0&amp;special=0&amp;limits=2000&amp;login=0&amp;managed=0&amp;protocolVer=57&amp;chat=dchat@tvpot.0@111@9000@0&amp;ishome=0&amp;qualityV=4000&amp;resH=1280&amp;resV=720&amp;prgmid1=17035783&amp;ip1=203.133.173.24&amp;qualityV1=500&amp;resH1=480&amp;resV1=320" title="[조마문]GTA5출현했던영상 보며 노가리 4000K 60FPS (XBOX360)">[조마문]GTA5출현했던영상 보..</a>
+				<dl class="room_info">
+			<dt>아이디</dt>
+			<dd title="조마문">조마문</dd>
+						<dt>방송설명</dt>
+			<dd class="prgm_desc" title="안녕하세요.추천PD로 전문리그&amp;콘솔공략방송을 하고 있는 PD조마문입니다.">
+				<span class="bar">|</span>
+				<span class="title">안녕하세요.추천PD로 전문리그&amp;콘솔공략방송을 하고 있는 PD조마문입니다.</span>
+			</dd>
+					</dl>
+		<a href="javascript:;" onclick="window.open('/potplayer/SharePopup.do?pdid=189024&title=' + encodeURIComponent('[조마문]GTA5출현했던영상 보며 노가리 4000K 60FPS (XBOX360)'), 'potplayershare1', 'width=480, height=390, location=0, menubar=0, resizable=0, scrollbars=0, toolbar=0')" class="ico_program link_share">공유하기</a>
+		<dl class="broad_info">
+			<dt>시청자수</dt>
+			<dd title="시청자수" class="icon_room">
+								53
+								/2000
+			</dd>
+			<dt>추천수</dt>
+			<dd class="icon_good">2494</dd>
+		</dl>
+		<div id="castInfoThumb_17035787" class="cast_info_panel">
+	<div class="title">방송정보</div>
+	<div class="info_main">
+		<ul>
+			<li>PD : <strong>조마문</strong></li>
+			<li>총시청자 :
+				<strong>
+									53 / 2000
+								</strong>
+			</li>
+			<li>방속성 :
+				<strong>
+									 일반방 								</strong>
+			</li>
+			<li>방송시작 : 05-31 16:19</li>
+		</ul>
+	</div>
+	<div class="info_sub">
+		<ul>
+			<li>해상도 : 1280x720</li>
+			<li>프레임 : 60fps</li>
+			<li>화질 : 4000kbps</li>
+			<li>음질 : 192kbps</li>
+			<li>주파수 : 48Khz</li>
+			<li>소리 :   스테레오</li>
+		</ul>
+	</div>
+</div>
+	</div>
+</li>
+										<li id="pid_17049683_pdid_B1ljI" class="live_air">
+
+	<a class="thumb" href="/street/list?prgmid=17049683&amp;rprgmid=17049659&amp;ip=203.133.173.30&amp;lock=&amp;adult=0&amp;special=0&amp;limits=2000&amp;login=0&amp;managed=0&amp;protocolVer=57&amp;chat=dchat@tvpot.0@111@9000@0&amp;ishome=0&amp;qualityV=4000&amp;resH=1280&amp;resV=1024&amp;prgmid1=17049672&amp;ip1=203.133.173.22&amp;qualityV1=500&amp;resH1=480&amp;resV1=320">
+			<img height="56" width="75" alt="wow skrillex 야법 20+" onerror="this.src='http://i1.daumcdn.net/icon/see/2010_potplayer/noimg.gif';" src="http://i1.daumcdn.net/potplayer/live/image/17049683/snapshot.jpg?t=201553122246" alt="방 이미지 없음" />
+		 <span class="ico_comm ico_hd">HD</span> 	</a>
+		<div class="cont">
+		<a class="broad_name" href="/street/list?prgmid=17049683&amp;rprgmid=17049659&amp;ip=203.133.173.30&amp;lock=&amp;adult=0&amp;special=0&amp;limits=2000&amp;login=0&amp;managed=0&amp;protocolVer=57&amp;chat=dchat@tvpot.0@111@9000@0&amp;ishome=0&amp;qualityV=4000&amp;resH=1280&amp;resV=1024&amp;prgmid1=17049672&amp;ip1=203.133.173.22&amp;qualityV1=500&amp;resH1=480&amp;resV1=320" title="wow skrillex 야법 20+">wow skrillex 야법 20+</a>
+				<dl class="room_info">
+			<dt>아이디</dt>
+			<dd title="skrillex">skrillex</dd>
+						<dt>방송설명</dt>
+			<dd class="prgm_desc" title="용필성님의 핫한딜">
+				<span class="bar">|</span>
+				<span class="title">용필성님의 핫한딜</span>
+			</dd>
+					</dl>
+		<a href="javascript:;" onclick="window.open('/potplayer/SharePopup.do?pdid=dkfmal0415&title=' + encodeURIComponent('wow skrillex 야법 20+'), 'potplayershare1', 'width=480, height=390, location=0, menubar=0, resizable=0, scrollbars=0, toolbar=0')" class="ico_program link_share">공유하기</a>
+		<dl class="broad_info">
+			<dt>시청자수</dt>
+			<dd title="시청자수" class="icon_room">
+								11
+								/2000
+			</dd>
+			<dt>추천수</dt>
+			<dd class="icon_good">124</dd>
+		</dl>
+		<div id="castInfoThumb_17049683" class="cast_info_panel">
+	<div class="title">방송정보</div>
+	<div class="info_main">
+		<ul>
+			<li>PD : <strong>skrillex</strong></li>
+			<li>총시청자 :
+				<strong>
+									11 / 2000
+								</strong>
+			</li>
+			<li>방속성 :
+				<strong>
+									 일반방 								</strong>
+			</li>
+			<li>방송시작 : 05-31 21:29</li>
+		</ul>
+	</div>
+	<div class="info_sub">
+		<ul>
+			<li>해상도 : 1280x1024</li>
+			<li>프레임 : 24fps</li>
+			<li>화질 : 4000kbps</li>
+			<li>음질 : 128kbps</li>
+			<li>주파수 : 48Khz</li>
+			<li>소리 :   스테레오</li>
+		</ul>
+	</div>
+</div>
+	</div>
+</li>
+									</ul>
+				
+				<div class="wrap_page">
+					<button class="type_btn btn_prev_off" title="이전 추천방송 보기">이전 추천방송 보기</button> <!-- 버튼 비활성화 : _off 추가 -->
+					<button class="type_btn btn_next" title="다음 추천방송 보기">다음 추천방송 보기</button>					
+				</div>
+			</div>
+<!-- 추천방송 리스트 끝 -->
+
+
+
+<!-- 전체방송 리스트 시
+2000
+작 -->									
+			<div class="area_broadcast">
+				<h3><strong class="type_tit tit_view_list">방송보기</strong><span class="list_num">(749개)</span></h3>
+				
+				<div class="wrap_order">
+					<h3 class="hidden">정렬순 선택 검색</h3>
+					<a class="type_btn select" href="#1">인기순</a>
+					<div class="layer">
+						<ul>
+							<li><a href="/potplayer/Live.do?listtype=0&amp;isall=true">최신순</a></li>
+							<li><a href="/potplayer/Live.do?listtype=1&amp;isall=true">인기순</a></li>
+							<li><a href="/potplayer/Live.do?listtype=2&amp;isall=true">고화질</a></li>
+							<li><a href="/potplayer/Live.do?listtype=3&amp;isall=true">추천순</a></li>
+						</ul>
+					</div>
+				</div>
+				<ul class="wrap_tv_list">
+										<li id="pid_17050757_pdid_BGHi9" class="live_air">
+
+	<a class="thumb" href="/street/list?prgmid=17050757&amp;rprgmid=17050750&amp;ip=222.231.40.40&amp;lock=&amp;adult=0&amp;special=1&amp;limits=120000&amp;login=0&amp;managed=1&amp;protocolVer=57&amp;chat=dchat@tvpot.0@111@9000@0&amp;ishome=0&amp;qualityV=2000&amp;resH=1280&amp;resV=720&amp;prgmid1=17050791&amp;ip1=222.231.40.72&amp;qualityV1=1000&amp;resH1=640&amp;resV1=360&amp;prgmid2=17050816&amp;ip2=117.52.10.188&amp;qualityV2=500&amp;resH2=480&amp;resV2=320">
+			<img height="56" width="75" alt="[마리텔] 백주부의 더 고급진 레시피 [마이리틀텔리비전]" onerror="this.src='http://i1.daumcdn.net/icon/see/2010_potplayer/noimg.gif';" src="http://i1.daumcdn.net/potplayer/live/image/17050757/snapshot.jpg?t=201553122246" alt="방 이미지 없음" />
+		 <span class="ico_comm ico_hd">HD</span> 	</a>
+		<div class="cont">
+		<a class="broad_name" href="/street/list?prgmid=17050757&amp;rprgmid=17050750&amp;ip=222.231.40.40&amp;lock=&amp;adult=0&amp;special=1&amp;limits=120000&amp;login=0&amp;managed=1&amp;protocolVer=57&amp;chat=dchat@tvpot.0@111@9000@0&amp;ishome=0&amp;qualityV=2000&amp;resH=1280&amp;resV=720&amp;prgmid1=17050791&amp;ip1=222.231.40.72&amp;qualityV1=1000&amp;resH1=640&amp;resV1=360&amp;prgmid2=17050816&amp;ip2=117.52.10.188&amp;qualityV2=500&amp;resH2=480&amp;resV2=320" title="[마리텔] 백주부의 더 고급진 레시피 [마이리틀텔리비전]">[마리텔] 백주부의 더 고급진 레..</a>
+				<dl class="room_info">
+			<dt>아이디</dt>
+			<dd title="MBC">MBC</dd>
+						<dt>방송설명</dt>
+			<dd class="prgm_desc" title="[마이리틀텔리비전] MLT-04
+백주부의 더 고급진 레시피 ">
+				<span class="bar">|</span>
+				<span class="title">[마이리틀텔리비전] MLT-04
+백주부의 더 고급진 레시피 </span>
+			</dd>
+					</dl>
+		<a href="javascript:;" onclick="window.open('/potplayer/SharePopup.do?pdid=mbctv02.man&title=' + encodeURIComponent('[마리텔] 백주부의 더 고급진 레시피 [마이리틀텔리비전]'), 'potplayershare1', 'width=480, height=390, location=0, menubar=0, resizable=0, scrollbars=0, toolbar=0')" class="ico_program link_share">공유하기</a>
+		<dl class="broad_info">
+			<dt>시청자수</dt>
+			<dd title="시청자수" class="icon_room">
+								0
+								/120000
+			</dd>
+			<dt>추천수</dt>
+			<dd class="icon_good">0</dd>
+		</dl>
+		<div id="castInfoThumb_17050757" class="cast_info_panel">
+	<div class="title">방송정보</div>
+	<div class="info_main">
+		<ul>
+			<li>PD : <strong>MBC</strong></li>
+			<li>총시청자 :
+				<strong>
+									0 / 120000
+								</strong>
+			</li>
+			<li>방속성 :
+				<strong>
+									 일반방 								</strong>
+			</li>
+			<li>방송시작 : 05-31 21:39</li>
+		</ul>
+	</div>
+	<div class="info_sub">
+		<ul>
+			<li>해상도 : 1280x720</li>
+			<li>프레임 : 30fps</li>
+			<li>화질 : 2000kbps</li>
+			<li>음질 : 128kbps</li>
+			<li>주파수 : 48Khz</li>
+			<li>소리 :   스테레오</li>
+		</ul>
+	</div>
+</div>
+	</div>
+</li>
+										<li id="pid_17051657_pdid_BGHiJ" class="live_air">
+
+	<a class="thumb" href="/street/list?prgmid=17051657&amp;rprgmid=17051655&amp;ip=203.133.173.135&amp;lock=&amp;adult=0&amp;special=1&amp;limits=40000&amp;login=0&amp;managed=1&amp;protocolVer=57&amp;chat=dchat@tvpot.0@111@9000@0&amp;ishome=0&amp;qualityV=2000&amp;resH=1280&amp;resV=720&amp;prgmid1=17051690&amp;ip1=203.133.173.197&amp;qualityV1=1000&amp;resH1=640&amp;resV1=360&amp;prgmid2=17051705&amp;ip2=203.133.162.217&amp;qualityV2=500&amp;resH2=480&amp;resV2=320">
+			<img height="56" width="75" alt="[마리텔] 샤이니 키의 View티풀 라이프 [마이리틀텔레비전]" onerror="this.src='http://i1.daumcdn.net/icon/see/2010_potplayer/noimg.gif';" src="http://i1.daumcdn.net/potplayer/live/image/17051657/snapshot.jpg?t=201553122246" alt="방 이미지 없음" />
+		 <span class="ico_comm ico_hd">HD</span> 	</a>
+		<div class="cont">
+		<a class="broad_name" href="/street/list?prgmid=17051657&amp;rprgmid=17051655&amp;ip=203.133.173.135&amp;lock=&amp;adult=0&amp;special=1&amp;limits=40000&amp;login=0&amp;managed=1&amp;protocolVer=57&amp;chat=dchat@tvpot.0@111@9000@0&amp;ishome=0&amp;qualityV=2000&amp;resH=1280&amp;resV=720&amp;prgmid1=17051690&amp;ip1=203.133.173.197&amp;qualityV1=1000&amp;resH1=640&amp;resV1=360&amp;prgmid2=17051705&amp;ip2=203.133.162.217&amp;qualityV2=500&amp;resH2=480&amp;resV2=320" title="[마리텔] 샤이니 키의 View티풀 라이프 [마이리틀텔레비전]">[마리텔] 샤이니 키의 View티풀..</a>
+				<dl class="room_info">
+			<dt>아이디</dt>
+			<dd title="MBC_마리텔_01">MBC_마리텔_01</dd>
+						<dt>방송설명</dt>
+			<dd class="prgm_desc" title="마이리틀텔레비전 MLT-04
+샤이니 키의 View티풀 라이프
+
+
+">
+				<span class="bar">|</span>
+				<span class="title">마이리틀텔레비전 MLT-04
+샤이니 키의 View티풀 라이프
+
+
+</span>
+			</dd>
+					</dl>
+		<a href="javascript:;" onclick="window.open('/potplayer/SharePopup.do?pdid=mbctv04.man&title=' + encodeURIComponent('[마리텔] 샤이니 키의 View티풀 라이프 [마이리틀텔레비전]'), 'potplayershare1', 'width=480, height=390, location=0, menubar=0, resizable=0, scrollbars=0, toolbar=0')" class="ico_program link_share">공유하기</a>
+		<dl class="broad_info">
+			<dt>시청자수</dt>
+			<dd title="시청자수" class="icon_room">
+								0
+								/40000
+			</dd>
+			<dt>추천수</dt>
+			<dd class="icon_good">0</dd>
+		</dl>
+		<div id="castInfoThumb_17051657" class="cast_info_panel">
+	<div class="title">방송정보</div>
+	<div class="info_main">
+		<ul>
+			<li>PD : <strong>MBC_마리텔_01</strong></li>
+			<li>총시청자 :
+				<strong>
+									0 / 40000
+								</strong>
+			</li>
+			<li>방속성 :
+				<strong>
+									 일반방 								</strong>
+			</li>
+			<li>방송시작 : 05-31 21:51</li>
+		</ul>
+	</div>
+	<div class="info_sub">
+		<ul>
+			<li>해상도 : 1280x720</li>
+			<li>프레임 : 30fps</li>
+			<li>화질 : 2000kbps</li>
+			<li>음질 : 128kbps</li>
+			<li>주파수 : 48Khz</li>
+			<li>소리 :   스테레오</li>
+		</ul>
+	</div>
+</div>
+	</div>
+</li>
+										<li id="pid_17053840_pdid_BGHii" class="live_air">
+
+	<a class="thumb" href="/street/list?prgmid=17053840&amp;rprgmid=17053838&amp;ip=222.231.40.78&amp;lock=&amp;adult=0&amp;special=1&amp;limits=40000&amp;login=0&amp;managed=1&amp;protocolVer=57&amp;chat=dchat@tvpot.0@111@9000@0&amp;ishome=0&amp;qualityV=2000&amp;resH=1280&amp;resV=720&amp;prgmid1=17053875&amp;ip1=222.231.40.15&amp;qualityV1=1000&amp;resH1=640&amp;resV1=360&amp;prgmid2=17053888&amp;ip2=203.133.173.47&amp;qualityV2=500&amp;resH2=480&amp;resV2=320">
+			<img height="56" width="75" alt="[마리텔]신수지의 기적의 체조 쇼![마이리틀 텔레비전]" onerror="this.src='http://i1.daumcdn.net/icon/see/2010_potplayer/noimg.gif';" src="http://i1.daumcdn.net/potplayer/live/image/17053840/snapshot.jpg?t=201553122246" alt="방 이미지 없음" />
+		 <span class="ico_comm ico_hd">HD</span> 	</a>
+		<div class="cont">
+		<a class="broad_name" href="/street/list?prgmid=17053840&amp;rprgmid=17053838&amp;ip=222.231.40.78&amp;lock=&amp;adult=0&amp;special=1&amp;limits=40000&amp;login=0&amp;managed=1&amp;protocolVer=57&amp;chat=dchat@tvpot.0@111@9000@0&amp;ishome=0&amp;qualityV=2000&amp;resH=1280&amp;resV=720&amp;prgmid1=17053875&amp;ip1=222.231.40.15&amp;qualityV1=1000&amp;
+2000
+resH1=640&amp;resV1=360&amp;prgmid2=17053888&amp;ip2=203.133.173.47&amp;qualityV2=500&amp;resH2=480&amp;resV2=320" title="[마리텔]신수지의 기적의 체조 쇼![마이리틀 텔레비전]">[마리텔]신수지의 기적의 체조 ..</a>
+				<dl class="room_info">
+			<dt>아이디</dt>
+			<dd title="MBC">MBC</dd>
+						<dt>방송설명</dt>
+			<dd class="prgm_desc" title="마이리틀레비전MLT-04
+신수지의 &quot;기적의 체조 쇼&quot;!">
+				<span class="bar">|</span>
+				<span class="title">마이리틀레비전MLT-04
+신수지의 &quot;기적의 체조 쇼&quot;!</span>
+			</dd>
+					</dl>
+		<a href="javascript:;" onclick="window.open('/potplayer/SharePopup.do?pdid=mbctv05.man&title=' + encodeURIComponent('[마리텔]신수지의 기적의 체조 쇼![마이리틀 텔레비전]'), 'potplayershare1', 'width=480, height=390, location=0, menubar=0, resizable=0, scrollbars=0, toolbar=0')" class="ico_program link_share">공유하기</a>
+		<dl class="broad_info">
+			<dt>시청자수</dt>
+			<dd title="시청자수" class="icon_room">
+								0
+								/40000
+			</dd>
+			<dt>추천수</dt>
+			<dd class="icon_good">0</dd>
+		</dl>
+		<div id="castInfoThumb_17053840" class="cast_info_panel">
+	<div class="title">방송정보</div>
+	<div class="info_main">
+		<ul>
+			<li>PD : <strong>MBC</strong></li>
+			<li>총시청자 :
+				<strong>
+									0 / 40000
+								</strong>
+			</li>
+			<li>방속성 :
+				<strong>
+									 일반방 								</strong>
+			</li>
+			<li>방송시작 : 05-31 22:15</li>
+		</ul>
+	</div>
+	<div class="info_sub">
+		<ul>
+			<li>해상도 : 1280x720</li>
+			<li>프레임 : 30fps</li>
+			<li>화질 : 2000kbps</li>
+			<li>음질 : 128kbps</li>
+			<li>주파수 : 48Khz</li>
+			<li>소리 :   스테레오</li>
+		</ul>
+	</div>
+</div>
+	</div>
+</li>
+										<li id="pid_17052217_pdid_BGHiD" class="live_air">
+
+	<a class="thumb" href="/street/list?prgmid=17052217&amp;rprgmid=17052212&amp;ip=117.52.4.46&amp;lock=&amp;adult=0&amp;special=1&amp;limits=40000&amp;login=0&amp;managed=1&amp;protocolVer=57&amp;chat=dchat@tvpot.0@111@9000@0&amp;ishome=0&amp;qualityV=2000&amp;resH=1280&amp;resV=720&amp;prgmid1=17052265&amp;ip1=211.110.63.169&amp;qualityV1=1000&amp;resH1=640&amp;resV1=360&amp;prgmid2=17052301&amp;ip2=222.239.129.124&amp;qualityV2=500&amp;resH2=480&amp;resV2=320">
+			<img height="56" width="75" alt="[마리텔] 홍석천의 내가 너희를 구원하리라 [마이리틀텔레비전]" onerror="this.src='http://i1.daumcdn.net/icon/see/2010_potplayer/noimg.gif';" src="http://i1.daumcdn.net/potplayer/live/image/17052217/snapshot.jpg?t=201553122246" alt="방 이미지 없음" />
+		 <span class="ico_comm ico_hd">HD</span> 	</a>
+		<div class="cont">
+		<a class="broad_name" href="/street/list?prgmid=17052217&amp;rprgmid=17052212&amp;ip=117.52.4.46&amp;lock=&amp;adult=0&amp;special=1&amp;limits=40000&amp;login=0&amp;managed=1&amp;protocolVer=57&amp;chat=dchat@tvpot.0@111@9000@0&amp;ishome=0&amp;qualityV=2000&amp;resH=1280&amp;resV=720&amp;prgmid1=17052265&amp;ip1=211.110.63.169&amp;qualityV1=1000&amp;resH1=640&amp;resV1=360&amp;prgmid2=17052301&amp;ip2=222.239.129.124&amp;qualityV2=500&amp;resH2=480&amp;resV2=320" title="[마리텔] 홍석천의 내가 너희를 구원하리라 [마이리틀텔레비전]">[마리텔] 홍석천의 내가 너희를 ..</a>
+				<dl class="room_info">
+			<dt>아이디</dt>
+			<dd title="MBC01">MBC01</dd>
+						<dt>방송설명</dt>
+			<dd class="prgm_desc" title="마이리틀텔레비전 MLT-04
+홍석천의 내가 너희를 구원하리라">
+				<span class="bar">|</span>
+				<span class="title">마이리틀텔레비전 MLT-04
+홍석천의 내가 너희를 구원하리라</span>
+			</dd>
+					</dl>
+		<a href="javascript:;" onclick="window.open('/potplayer/SharePopup.do?pdid=mbctv03.man&title=' + encodeURIComponent('[마리텔] 홍석천의 내가 너희를 구원하리라 [마이리틀텔레비전]'), 'potplayershare1', 'width=480, height=390, location=0, menubar=0, resizable=0, scrollbars=0, toolbar=0')" class="ico_program link_share">공유하기</a>
+		<dl class="broad_info">
+			<dt>시청자수</dt>
+			<dd title="시청자수" class="icon_room">
+								0
+								/40000
+			</dd>
+			<dt>추천수</dt>
+			<dd class="icon_good">0</dd>
+		</dl>
+		<div id="castInfoThumb_17052217" class="cast_info_panel">
+	<div class="title">방송정보</div>
+	<div class="info_main">
+		<ul>
+			<li>PD : <strong>MBC01</strong></li>
+			<li>총시청자 :
+				<strong>
+									0 / 40000
+								</strong>
+			</li>
+			<li>방속성 :
+				<strong>
+									 일반방 								</strong>
+			</li>
+			<li>방송시작 : 05-31 21:56</li>
+		</ul>
+	</div>
+	<div class="info_sub">
+		<ul>
+			<li>해상도 : 1280x720</li>
+			<li>프레임 : 30fps</li>
+			<li>화질 : 2000kbps</li>
+			<li>음질 : 128kbps</li>
+			<li>주파수 : 48Khz</li>
+			<li>소리 :   스테레오</li>
+		</ul>
+	</div>
+</div>
+	</div>
+</li>
+										<li id="pid_17050326_pdid_BGHi2" class="live_air">
+
+	<a class="thumb" href="/street/list?prgmid=17050326&amp;rprgmid=17050322&amp;ip=203.133.173.216&amp;lock=&amp;adult=0&amp;special=1&amp;limits=40000&amp;login=0&amp;managed=1&amp;protocolVer=57&amp;chat=dchat@tvpot.0@111@9000@0&amp;ishome=0&amp;qualityV=2000&amp;resH=1280&amp;resV=720&amp;prgmid1=17050380&amp;ip1=211.244.83.186&amp;qualityV1=1000&amp;resH1=640&amp;resV1=360&amp;prgmid2=17050397&amp;ip2=211.244.83.182&amp;qualityV2=500&amp;resH2=480&amp;resV2=320">
+			<img height="56" width="75" alt="[마리텔] 김구라의 트루 아트 스토리 [마이리틀텔레비전]" onerror="this.src='http://i1.daumcdn.net/icon/see/2010_potplayer/noimg.gif';" src="http://i1.daumcdn.net/potplayer/live/image/17050326/snapshot.jpg?t=201553122246" alt="방 이미지 없음" />
+		 <span class="ico_comm ico_hd">HD</span> 	</a>
+		<div class="cont">
+		<a class="broad_name" href="/street/list?prgmid=17050326&amp;rprgmid=17050322&amp;ip=203.133.173.216&amp;lock=&amp;adult=0&amp;special=1&amp;limits=40000&amp;login=0&amp;managed=1&amp;protocolVer=57&amp;chat=dchat@tvpot.0@111@9000@0&amp;ishome=0&amp;qualityV=2000&amp;resH=1280&amp;resV=720&amp;prgmid1=17050380&amp;ip1=211.244.83.186&amp;qualityV1=1000&amp;resH1=640&amp;resV1=360&amp;prgmid2=17050397&amp;ip2=211.244.83.182&amp;qualityV2=500&amp;resH2=480&amp;resV2=320" title="[마리텔] 김구라의 트루 아트 스토리 [마이리틀텔레비전]">[마리텔] 김구라의 트루 아트 스..</a>
+				<dl class="room_info">
+			<dt>아이디</dt>
+			<dd title="MBC">MBC</dd>
+						<dt>방송설명</dt>
+			<dd class="prgm_desc" title="마이리틀텔레비전 MLT-04
+김구라의 &quot;트루 아트 스토리&quot;">
+				<span class="bar">|</span>
+				<span class="title">마이리틀텔레비전 MLT-04
+김구라의 &quot;트루 아트 스토리&quot;</span>
+			</dd>
+					</dl>
+		<a href="javascript:;" onclick="window.open('/potplayer/SharePopup.do?pdid=mbctv01.man&title=' + encodeURIComponent('[마리텔] 김구라의 트루 아트 스토리 [마이리틀텔레비전]'), 'potplayershare1', 'width=480, height=390, location=0, menubar=0, resizable=0, scrollbars=0, toolbar=0')" class="ico_program link_share">공유하기</a>
+		<dl class="broad_info">
+			<dt>시청자수</dt>
+			<dd title="시청자수" class="icon_room">
+								0
+								/40000
+			</dd>
+			<dt>추천수</dt>
+			<dd class="icon_good">0</dd>
+		</dl>
+		<div id="castInfoThumb_17050326" class="cast_info_panel">
+	<div class="title">방송정보</div>
+	<div class="info_main">
+		<ul>
+			<li>PD : <strong>MBC</strong></li>
+			<li>총시청자 :
+				<strong>
+									0 / 40000
+								</strong>
+			</li>
+			<li>방속성 :
+				<strong>
+									 일반방 								</strong>
+			</li>
+			<li>방송시작 : 05-31 21:36</li>
+		</ul>
+	</div>
+	<div class="info_sub">
+		<ul>
+			<li>해상도 : 1280x720</li>
+			<li>프레임 : 30fps</li>
+			<li>화질 : 2000kbps</li>
+			<li>음질 : 128kbps</li>
+			<li>주파수 : 48Khz</li>
+			<li>소리 :   스테레오</li>
+		</ul>
+	</div>
+</div>
+	</div>
+</li>
+										<li id="pid_16998225_pdid_BOeWt" class="live_air">
+
+	<a class="thumb" href="/street/list?prgmid=16998225&amp;rprgmid=16998218&amp;ip=203.133.173.18&amp;lock=&amp;adult=0&amp;special=0&a
+2000
+mp;limits=2000&amp;login=0&amp;managed=0&amp;protocolVer=57&amp;chat=dchat@tvpot.0@111@9000@0&amp;ishome=0&amp;qualityV=3000&amp;resH=1280&amp;resV=720&amp;prgmid1=16998231&amp;ip1=203.133.173.26&amp;qualityV1=500&amp;resH1=480&amp;resV1=320">
+			<img height="56" width="75" alt="HD★주말 특선영화★ | 최신영화한국영화lol롤ufc직캠마리텔애니코난짱구심슨크라임씬냉장고비정상한식대첩snl" onerror="this.src='http://i1.daumcdn.net/icon/see/2010_potplayer/noimg.gif';" src="http://i1.daumcdn.net/potplayer/live/image/16998225/snapshot.jpg?t=201553122246" alt="방 이미지 없음" />
+		 <span class="ico_comm ico_hd">HD</span> 	</a>
+		<div class="cont">
+		<a class="broad_name" href="/street/list?prgmid=16998225&amp;rprgmid=16998218&amp;ip=203.133.173.18&amp;lock=&amp;adult=0&amp;special=0&amp;limits=2000&amp;login=0&amp;managed=0&amp;protocolVer=57&amp;chat=dchat@tvpot.0@111@9000@0&amp;ishome=0&amp;qualityV=3000&amp;resH=1280&amp;resV=720&amp;prgmid1=16998231&amp;ip1=203.133.173.26&amp;qualityV1=500&amp;resH1=480&amp;resV1=320" title="HD★주말 특선영화★ | 최신영화한국영화lol롤ufc직캠마리텔애니코난짱구심슨크라임씬냉장고비정상한식대첩snl">HD★주말 특선영화★ | 최신영..</a>
+				<dl class="room_info">
+			<dt>아이디</dt>
+			<dd title="우아한">우아한</dd>
+						<dt>방송설명</dt>
+			<dd class="prgm_desc" title="엔딩 크레딧 자동 스킵">
+				<span class="bar">|</span>
+				<span class="title">엔딩 크레딧 자동 스킵</span>
+			</dd>
+					</dl>
+		<a href="javascript:;" onclick="window.open('/potplayer/SharePopup.do?pdid=ifunvvv&title=' + encodeURIComponent('HD★주말 특선영화★ | 최신영화한국영화lol롤ufc직캠마리텔애니코난짱구심슨크라임씬냉장고비정상한식대첩snl'), 'potplayershare1', 'width=480, height=390, location=0, menubar=0, resizable=0, scrollbars=0, toolbar=0')" class="ico_program link_share">공유하기</a>
+		<dl class="broad_info">
+			<dt>시청자수</dt>
+			<dd title="시청자수" class="icon_room">
+								1381
+								/2000
+			</dd>
+			<dt>추천수</dt>
+			<dd class="icon_good">2112</dd>
+		</dl>
+		<div id="castInfoThumb_16998225" class="cast_info_panel">
+	<div class="title">방송정보</div>
+	<div class="info_main">
+		<ul>
+			<li>PD : <strong>우아한</strong></li>
+			<li>총시청자 :
+				<strong>
+									1381 / 2000
+								</strong>
+			</li>
+			<li>방속성 :
+				<strong>
+									 일반방 								</strong>
+			</li>
+			<li>방송시작 : 05-30 21:09</li>
+		</ul>
+	</div>
+	<div class="info_sub">
+		<ul>
+			<li>해상도 : 1280x720</li>
+			<li>프레임 : 24fps</li>
+			<li>화질 : 3000kbps</li>
+			<li>음질 : 128kbps</li>
+			<li>주파수 : 48Khz</li>
+			<li>소리 :   스테레오</li>
+		</ul>
+	</div>
+</div>
+	</div>
+</li>
+										<li id="pid_17045389_pdid_BQBqS" class="live_air">
+
+	<a class="thumb" href="/street/list?prgmid=17045389&amp;rprgmid=17045380&amp;ip=203.133.173.33&amp;lock=&amp;adult=0&amp;special=0&amp;limits=3200&amp;login=0&amp;managed=0&amp;protocolVer=57&amp;chat=dchat@tvpot.0@111@9000@0&amp;ishome=0&amp;qualityV=4000&amp;resH=1280&amp;resV=1024&amp;prgmid1=17045385&amp;ip1=203.133.173.32&amp;qualityV1=500&amp;resH1=480&amp;resV1=320">
+			<img height="56" width="75" alt="[진격의 거인] 홍련의 화살          영화예능애니게임마녀사냥비정상코난드래곤볼원피스타snlol롤농구야구" onerror="this.src='http://i1.daumcdn.net/icon/see/2010_potplayer/noimg.gif';" src="http://i1.daumcdn.net/potplayer/live/image/17045389/snapshot.jpg?t=201553122246" alt="방 이미지 없음" />
+		 <span class="ico_comm ico_hd">HD</span> 	</a>
+		<div class="cont">
+		<a class="broad_name" href="/street/list?prgmid=17045389&amp;rprgmid=17045380&amp;ip=203.133.173.33&amp;lock=&amp;adult=0&amp;special=0&amp;limits=3200&amp;login=0&amp;managed=0&amp;protocolVer=57&amp;chat=dchat@tvpot.0@111@9000@0&amp;ishome=0&amp;qualityV=4000&amp;resH=1280&amp;resV=1024&amp;prgmid1=17045385&amp;ip1=203.133.173.32&amp;qualityV1=500&amp;resH1=480&amp;resV1=320" title="[진격의 거인] 홍련의 화살          영화예능애니게임마녀사냥비정상코난드래곤볼원피스타snlol롤농구야구">[진격의 거인] 홍련의 화살       ..</a>
+				<dl class="room_info">
+			<dt>아이디</dt>
+			<dd title="감자냔">감자냔</dd>
+					</dl>
+		<a href="javascript:;" onclick="window.open('/potplayer/SharePopup.do?pdid=to77533&title=' + encodeURIComponent('[진격의 거인] 홍련의 화살          영화예능애니게임마녀사냥비정상코난드래곤볼원피스타snlol롤농구야구'), 'potplayershare1', 'width=480, height=390, location=0, menubar=0, resizable=0, scrollbars=0, toolbar=0')" class="ico_program link_share">공유하기</a>
+		<dl class="broad_info">
+			<dt>시청자수</dt>
+			<dd title="시청자수" class="icon_room">
+								1292
+								/3200
+			</dd>
+			<dt>추천수</dt>
+			<dd class="icon_good">71</dd>
+		</dl>
+		<div id="castInfoThumb_17045389" class="cast_info_panel">
+	<div class="title">방송정보</div>
+	<div class="info_main">
+		<ul>
+			<li>PD : <strong>감자냔</strong></li>
+			<li>총시청자 :
+				<strong>
+									1292 / 3200
+								</strong>
+			</li>
+			<li>방속성 :
+				<strong>
+									 일반방 								</strong>
+			</li>
+			<li>방송시작 : 05-31 20:09</li>
+		</ul>
+	</div>
+	<div class="info_sub">
+		<ul>
+			<li>해상도 : 1280x1024</li>
+			<li>프레임 : 24fps</li>
+			<li>화질 : 4000kbps</li>
+			<li>음질 : 192kbps</li>
+			<li>주파수 : 48Khz</li>
+			<li>소리 :   스테레오</li>
+		</ul>
+	</div>
+</div>
+	</div>
+</li>
+										<li id="pid_17046733_pdid_AiH2y" class="live_air">
+
+	<a class="thumb" href="/street/list?prgmid=17046733&amp;rprgmid=17046726&amp;ip=203.133.173.14&amp;lock=&amp;adult=0&amp;special=0&amp;limits=2000&amp;login=0&amp;managed=0&amp;protocolVer=57&amp;chat=dchat@tvpot.0@111@9000@0&amp;ishome=0&amp;qualityV=2000&amp;resH=1280&amp;resV=720&amp;prgmid1=17046735&amp;ip1=203.133.173.22&amp;qualityV1=500&amp;resH1=480&amp;resV1=320">
+			<img height="56" width="75" alt="[식빵] 하스스톤 투기장 외길인생" onerror="this.src='http://i1.daumcdn.net/icon/see/2010_potplayer/noimg.gif';" src="http://i1.daumcdn.net/potplayer/live/image/17046733/snapshot.jpg?t=201553122246" alt="방 이미지 없음" />
+		 <span class="ico_comm ico_hd">HD</span> 	</a>
+		<div class="cont">
+		<a class="broad_name" href="/street/list?prgmid=17046733&amp;rprgmid=17046726&amp;ip=203.133.173.14&amp;lock=&amp;adult=0&amp;special=0&amp;limits=2000&amp;login=0&amp;managed=0&amp;protocolVer=57&amp;chat=dchat@tvpot.0@111@9000@0&amp;ishome=0&amp;qualityV=2000&amp;resH=1280&amp;resV=720&amp;prgmid1=17046735&amp;ip1=203.133.173.22&amp;qualityV1=500&amp;resH1=480&amp;resV1=320" title="[식빵] 하스스톤 투기장 외길인생">[식빵] 하스스톤 투기장 외길인생</a>
+				<dl class="room_info">
+			<dt>아이디</dt>
+			<dd title="식빵">식빵</dd>
+						<dt>방송설명</dt>
+			<dd class="prgm_desc" title="하스스톤 투기장 전문 방송">
+				<span class="bar">|</span>
+				<span class="title">하스스톤 투기장 전문 방송</span>
+			</dd>
+					</dl>
+		<a href="javascript:;" onclick="window.open('/potplayer/SharePopup.do?pdid=sikkazama00&title=' + encodeURIComponent('[식빵] 하스스톤 투기장 외길인생'), 'potplayershare1', 'width=480, height=390, location=0, menubar=0, resizable=0, scrollbars=0, toolbar=0')" class="ico_program link_share">공유하기</a>
+		<dl class="broad_info">
+			<dt>시청자수</dt>
+			<dd title="시청자수" class="icon_room">
+								1251
+								/2000
+			</dd>
+			<dt>추천수</dt>
+			<dd class="icon_good">32237</dd>
+		</dl>
+		<div id="castInfoThumb_17046733" class="cast_info_panel">
+	<div class="title">방송정보</div>
+	<div class="info_main">
+		<ul>
+			<li>PD : <strong>식빵</strong></li>
+			<li>총시청자 :
+				<strong>
+									1251 / 2000
+								</strong>
+			</li>
+			<li>방속성 :
+				<strong>
+									 일반방 								</strong>
+			</li>
+			<li>방송시작 : 05-31 20:40</li>
+		</ul>
+	</div>
+	<div class="info_sub">
+		<ul>
+			<li>해상도 : 1
+2000
+280x720</li>
+			<li>프레임 : 30fps</li>
+			<li>화질 : 2000kbps</li>
+			<li>음질 : 128kbps</li>
+			<li>주파수 : 48Khz</li>
+			<li>소리 :   스테레오</li>
+		</ul>
+	</div>
+</div>
+	</div>
+</li>
+										<li id="pid_16911858_pdid_AsEW9" class="live_air">
+
+	<a class="thumb" href="/street/list?prgmid=16911858&amp;rprgmid=16911855&amp;ip=203.133.173.29&amp;lock=&amp;adult=0&amp;special=0&amp;limits=1999&amp;login=0&amp;managed=0&amp;protocolVer=57&amp;chat=dchat@tvpot.0@111@9000@0&amp;ishome=0&amp;qualityV=3000&amp;resH=1280&amp;resV=720">
+			<img height="56" width="75" alt="[조던HD][정주행] 냉장고를 부탁해 /fm2015/GTA5/PS4/에펨한국까막롤코빅게임코난영화한식대첩축구" onerror="this.src='http://i1.daumcdn.net/icon/see/2010_potplayer/noimg.gif';" src="http://i1.daumcdn.net/potplayer/live/image/16911858/snapshot.jpg?t=201553122246" alt="방 이미지 없음" />
+		 <span class="ico_comm ico_hd">HD</span> 	</a>
+		<div class="cont">
+		<a class="broad_name" href="/street/list?prgmid=16911858&amp;rprgmid=16911855&amp;ip=203.133.173.29&amp;lock=&amp;adult=0&amp;special=0&amp;limits=1999&amp;login=0&amp;managed=0&amp;protocolVer=57&amp;chat=dchat@tvpot.0@111@9000@0&amp;ishome=0&amp;qualityV=3000&amp;resH=1280&amp;resV=720" title="[조던HD][정주행] 냉장고를 부탁해 /fm2015/GTA5/PS4/에펨한국까막롤코빅게임코난영화한식대첩축구">[조던HD][정주행] 냉장고를 부..</a>
+				<dl class="room_info">
+			<dt>아이디</dt>
+			<dd title="조던HD">조던HD</dd>
+						<dt>방송설명</dt>
+			<dd class="prgm_desc" title="냉장고를 부탁해 정주행">
+				<span class="bar">|</span>
+				<span class="title">냉장고를 부탁해 정주행</span>
+			</dd>
+					</dl>
+		<a href="javascript:;" onclick="window.open('/potplayer/SharePopup.do?pdid=brave4575&title=' + encodeURIComponent('[조던HD][정주행] 냉장고를 부탁해 /fm2015/GTA5/PS4/에펨한국까막롤코빅게임코난영화한식대첩축구'), 'potplayershare1', 'width=480, height=390, location=0, menubar=0, resizable=0, scrollbars=0, toolbar=0')" class="ico_program link_share">공유하기</a>
+		<dl class="broad_info">
+			<dt>시청자수</dt>
+			<dd title="시청자수" class="icon_room">
+								1231
+								/1999
+			</dd>
+			<dt>추천수</dt>
+			<dd class="icon_good">40046</dd>
+		</dl>
+		<div id="castInfoThumb_16911858" class="cast_info_panel">
+	<div class="title">방송정보</div>
+	<div class="info_main">
+		<ul>
+			<li>PD : <strong>조던HD</strong></li>
+			<li>총시청자 :
+				<strong>
+									1231 / 1999
+								</strong>
+			</li>
+			<li>방속성 :
+				<strong>
+									 일반방 								</strong>
+			</li>
+			<li>방송시작 : 05-28 09:38</li>
+		</ul>
+	</div>
+	<div class="info_sub">
+		<ul>
+			<li>해상도 : 1280x720</li>
+			<li>프레임 : 30fps</li>
+			<li>화질 : 3000kbps</li>
+			<li>음질 : 128kbps</li>
+			<li>주파수 : 48Khz</li>
+			<li>소리 :   스테레오</li>
+		</ul>
+	</div>
+</div>
+	</div>
+</li>
+										<li id="pid_17045499_pdid_3QPV7" class="live_air">
+
+	<a class="thumb" href="/street/list?prgmid=17045499&amp;rprgmid=17045493&amp;ip=203.133.173.20&amp;lock=&amp;adult=0&amp;special=0&amp;limits=2000&amp;login=0&amp;managed=0&amp;protocolVer=57&amp;chat=dchat@tvpot.0@111@9000@0&amp;ishome=0&amp;qualityV=4000&amp;resH=1280&amp;resV=720&amp;prgmid1=17045497&amp;ip1=203.133.173.20&amp;qualityV1=500&amp;resH1=480&amp;resV1=320">
+			<img height="56" width="75" alt="[왁리텔] 신작 인디 집에서 아픈게임 홈식" onerror="this.src='http://i1.daumcdn.net/icon/see/2010_potplayer/noimg.gif';" src="http://i1.daumcdn.net/potplayer/live/image/17045499/snapshot.jpg?t=201553122246" alt="방 이미지 없음" />
+		 <span class="ico_comm ico_hd">HD</span> 	</a>
+		<div class="cont">
+		<a class="broad_name" href="/street/list?prgmid=17045499&amp;rprgmid=17045493&amp;ip=203.133.173.20&amp;lock=&amp;adult=0&amp;special=0&amp;limits=2000&amp;login=0&amp;managed=0&amp;protocolVer=57&amp;chat=dchat@tvpot.0@111@9000@0&amp;ishome=0&amp;qualityV=4000&amp;resH=1280&amp;resV=720&amp;prgmid1=17045497&amp;ip1=203.133.173.20&amp;qualityV1=500&amp;resH1=480&amp;resV1=320" title="[왁리텔] 신작 인디 집에서 아픈게임 홈식">[왁리텔] 신작 인디 집에서 아픈..</a>
+				<dl class="room_info">
+			<dt>아이디</dt>
+			<dd title="우왁굳">우왁굳</dd>
+					</dl>
+		<a href="javascript:;" onclick="window.open('/potplayer/SharePopup.do?pdid=ecvhao&title=' + encodeURIComponent('[왁리텔] 신작 인디 집에서 아픈게임 홈식'), 'potplayershare1', 'width=480, height=390, location=0, menubar=0, resizable=0, scrollbars=0, toolbar=0')" class="ico_program link_share">공유하기</a>
+		<dl class="broad_info">
+			<dt>시청자수</dt>
+			<dd title="시청자수" class="icon_room">
+								1139
+								/2000
+			</dd>
+			<dt>추천수</dt>
+			<dd class="icon_good">4188</dd>
+		</dl>
+		<div id="castInfoThumb_17045499" class="cast_info_panel">
+	<div class="title">방송정보</div>
+	<div class="info_main">
+		<ul>
+			<li>PD : <strong>우왁굳</strong></li>
+			<li>총시청자 :
+				<strong>
+									1139 / 2000
+								</strong>
+			</li>
+			<li>방속성 :
+				<strong>
+									 일반방 								</strong>
+			</li>
+			<li>방송시작 : 05-31 20:11</li>
+		</ul>
+	</div>
+	<div class="info_sub">
+		<ul>
+			<li>해상도 : 1280x720</li>
+			<li>프레임 : 60fps</li>
+			<li>화질 : 4000kbps</li>
+			<li>음질 : 128kbps</li>
+			<li>주파수 : 48Khz</li>
+			<li>소리 :   스테레오</li>
+		</ul>
+	</div>
+</div>
+	</div>
+</li>
+									</ul>
+			</div>
+
+		</div><!-- // wrap_cont -->
+	</div><!-- // pot_contents -->
+	<div class="wrap_paging">
+		<div class="player_paging">
+		<a href="#" class="go_fst2"><img src="http://i1.daumcdn.net/icon/see/2010_potplayer//btn_fst2.gif" width="16" height="13" alt="첫 페이지로 이동하기" /></a>
+	<a href="#" class="go_pre2"><img src="http://i1.daumcdn.net/icon/see/2010_potplayer//btn_pre2.gif" width="16" height="13" alt="이전 페이지로 이동하기" /></a>
+			<a href="#none">
+    		    			    																<span class="hiddenPhrase">현재페이지는</span><em>1</em></a><span>|</span>
+						    				    			    																<a href="/potplayer/Live.do?page=2&amp;listtype=1&amp;isall=true">2</a><span>|</span>
+						    				    			    																<a href="/potplayer/Live.do?page=3&amp;listtype=1&amp;isall=true">3</a><span>|</span>
+						    				    			    																<a href="/potplayer/Live.do?page=4&amp;listtype=1&amp;isall=true">4</a><span>|</span>
+						    				    			    																<a href="/potplayer/Live.do?page=5&amp;listtype=1&amp;isall=true" class="last">5</a>
+						    				    			   						<a href="/potplayer/Live.do?page=6&amp;listtype=1&amp;isall=true" class="go_nxt"><img src="http://i1.daumcdn.net/icon/see/2010_potplayer//btn_nxt.gif" width="16" height="13" alt="다음 페이지로 이동하기" /></a>
+	<a href="/potplayer/Live.do?page=75&amp;listtype=1&amp;isall=true" class="go_lst"><img src="http://i1.daumcdn.net/icon/see/2010_potplayer//btn_lst.gif" width="16" height="13" alt="마지막 페이지로 이동하기" /></a>
+	</div><!-- // pot_paging -->
+	</div><!-- // wrap_paging -->
+</div><!-- // playerWrap -->
+<div id="webman" style="overflow:hidden;position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;">
+<iframe id="__webmanFrame" name="__webmanFrame" src="http://www.daum.net/doc/webman.html" frameborder="0" scrolling="no"></iframe>
+</div>
+<script type="text/javascript">
+// <![CDATA[
+(function(){
+	tvpot.Potplayer.Toolbar.init();
+	tvpot.Potplayer.configureScroll('playerContents',82);
+	tvpot.Potplayer.setLinkBlur();
+	tvpot.Potplayer.MainLive.init();
+	tvpot.Potplayer.setListOpenLive();
+	//tvpot.Potplayer.HomeChecker.init();	//	특정방송(EPL)일 경우의 Daum 시작페이지 설정 로직 wdjung
+	tvpot.Potplayer.configureLiveSort();
+	tvpot.Potplayer.RoomInfoManager.init();
+//	tvpot.Potplayer.FavoriteManager.init({
+//		isLoginUser:  false //	});
+	tvpot.Potplayer.setReloadTimer();
+})();
+
+// @ prerequisite - jquery
+jQuery.noConflict();
+
+ 
+var noti_toggle_jq = jQuery("div.wrap_noti");
+//var shouldset = true;
+if(noti_toggle_jq != null && noti_toggle_jq.length > 0){
+	// 0. 공지사항 이벤트
+	var noti_toggle_anchor_jq = noti_toggle_jq.find("a.type_btn");
+	var noti_event_lock_obj=null;
+	noti_toggle_anchor_jq.on("click", function(){
+		
+		noti_event_lock_obj = new Object();
+		var self_jq = jQuery(this);
+		
+		var isOpen = noti_toggle_jq.hasClass("opt_open");
+		if(isOpen){
+			noti_toggle_jq.removeClass("opt_open");
+		} else {
+			noti_toggle_jq.addClass("opt_open");
+		}
+	});
+	noti_toggle_anchor_jq.mouseout(function(){
+		noti_event_lock_obj = null;
+	});
+
+	// 외부 모든 클릭이벤트가 들어오면 리스트를 접습니다.
+	var potplayer_list_jq = jQuery("div.wrap_cont");
+	potplayer_list_jq.on("click", function(){
+		if(noti_event_lock_obj==null){
+			noti_toggle_jq.removeClass("opt_open");	
+		}
+	})
+
+}
+
+
+
+
+//1. 추천 방송의 2개씩 변경되는 이벤트 로직 추가.
+function setRecommenedCastRowShowNHide(cur_page){
+	
+	// hide all
+	recommend_cast_list_jq.hide();
+	// show current
+	
+	var cur_head_idx = (cur_page-1)*2;
+	var cur_head_jq = jQuery(recommend_cast_list_jq[cur_head_idx]);
+	cur_head_jq.show();
+	var cur_tail_idx = cur_head_idx + 1;
+	var cur_tail_jq = jQuery(recommend_cast_list_jq[cur_tail_idx]);
+	cur_tail_jq.show();
+	
+}
+
+function setBtnDisabled(prev_btn_jq, next_btn_jq, cur_page, min_page, max_page){
+	
+	if(cur_page == min_page && cur_page == max_page){
+		
+		// 보여줄 페이지가 1개밖에 없는 경우
+		prev_btn_jq.removeClass("btn_prev").addClass("btn_prev_off");
+		next_btn_jq.removeClass("btn_next").addClass("btn_next_off");
+		
+		prev_btn_jq.hide();
+		next_btn_jq.hide();
+		
+	} else {
+		
+		// 그 외라면 prev로 변경
+		prev_btn_jq.removeClass("btn_prev_off").addClass("btn_prev");
+		next_btn_jq.removeClass("btn_next_off").addClass("btn_next");
+		
+	}
+	
+}
+
+var recommend_cast_list_btn_prev_jq = jQuery("div#recommend_cast_list div.wrap_page button.btn_prev_off");
+recommend_cast_list_btn_prev_jq.on("click",function(){
+	
+	var self_jq = jQuery(this);
+	function getPrevPage(cur_page){
+		cur_page--;
+		if(cur_page < min_page){ // 페이지가 롤링됩니다.
+			cur_page = max_page;
+		}
+		
+		setRecommenedCastRowShowNHide(cur_page);
+		setBtnDisabled(recommend_cast_list_btn_prev_jq, recommend_cast_list_btn_next_jq, cur_page, min_page, max_page);
+		
+		return cur_page;
+	}
+	
+	cur_page=getPrevPage(cur_page);
+});
+
+var recommend_cast_list_btn_next_jq = jQuery("div#recommend_cast_list div.wrap_page button.btn_next");
+recommend_cast_list_btn_next_jq.on("click",function(){
+	
+	function getNextPage(cur_page){
+		cur_page++;
+		if(max_page < cur_page){ // 페이지가 롤링됩니다.
+			cur_page = min_page;
+		}
+		
+		setRecommenedCastRowShowNHide(cur_page);
+		setBtnDisabled(recommend_cast_list_btn_prev_jq, recommend_cast_list_btn_next_jq, cur_page, min_page, max_page);
+		
+		return cur_page;
+	}
+	
+	cur_page=getNextPage(cur_page);	
+});
+
+var recommend_cast_list_jq = jQuery("div#recommend_cast_list ul.wrap_tv_list li");
+
+var cur_page=1;
+var min_page=1;
+var max_page=3;
+if(recommend_cast_list_jq != null && recommend_cast_list_jq.length > 0){
+	max_page = Math.ceil(recommend_cast_list_jq.length/2);
+	setRecommenedCastRowShowNHide(cur_page);
+	setBtnDisabled(recommend_cast_list_btn_prev_jq, recommend_cast_list_btn_next_jq, cur_page, min_page, max_page);
+}
+// ]]>
+</script>
+
+<script charset='utf-8' type='text/javascript' src='http://static.daum-img.net/tiara/tracker/tiara.js'></script>
+<script type='text/javascript'>
+    window.__pageTracker = {};
+ 
+    if (typeof __Tiara !== 'undefined' && typeof __Tiara.__getTracker !== 'undefined') {
+        __pageTracker = __Tiara.__getTracker();
+    } else {
+        __pageTracker.__trackPageview = function() {};
+    }
+    window.setTimeout(function() { try { window.__pageTracker.__trackPageview(); } catch(e) {} }, 1);
+</script>
+
+</body>
+</html>
+0
+
